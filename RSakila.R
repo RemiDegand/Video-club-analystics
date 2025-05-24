@@ -61,24 +61,7 @@ client_clust_data <- base_client %>%
   select(customer_id, total_spent, nb_payment) %>%
   na.omit()
 
-set.seed(123)
-kmeans_result <- kmeans(client_clust_data[, c("total_spent", "nb_payment")], centers = 3)
-
-client_clust_data$cluster <- as.factor(kmeans_result$cluster)
-ggplot(client_clust_data, aes(x = total_spent, y = nb_payment, color = cluster)) +
-  geom_point(size = 3, alpha = 0.7) +
-  labs(
-    title = "Customer Clustering by Behavior",
-    x = "Total Spent ($)",
-    y = "Number of Payments",
-    color = "Cluster"
-  ) +
-  theme_minimal()
-
-
-
 #Elbow Method
-# On suppose que base_client existe déjà avec total_spent et nb_payment
 data_clust <- base_client %>%
   select(total_spent, nb_payment) %>%
   na.omit()
@@ -118,33 +101,7 @@ ggplot(client_clust_data, aes(x = total_spent, y = nb_payment, color = cluster))
   ) +
   theme_minimal()
 
-#Après clustering
-
-set.seed(42)
-
-# On réutilise les données numériques
-data_clust <- base_client %>%
-  select(customer_id, total_spent, nb_payment) %>%
-  na.omit()
-
-# Appliquer K-means
-kmeans_result <- kmeans(data_clust[, c("total_spent", "nb_payment")], centers = 3)
-
-# Ajouter le cluster à la table
-data_clust$cluster <- as.factor(kmeans_result$cluster)
-
-
-ggplot(data_clust, aes(x = total_spent, y = nb_payment, color = cluster)) +
-  geom_point(size = 3, alpha = 0.7) +
-  labs(
-    title = "Customer Segmentation (k = 3)",
-    x = "Total Spent ($)",
-    y = "Number of Payments",
-    color = "Cluster"
-  ) +
-  theme_minimal()
-
-library(dplyr)
+#Analyse des 3 clusters
 
 data_clust %>%
   group_by(cluster) %>%
@@ -153,4 +110,3 @@ data_clust %>%
     avg_payment = round(mean(nb_payment), 2),
     count = n()
   )
-
