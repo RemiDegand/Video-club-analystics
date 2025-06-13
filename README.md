@@ -28,10 +28,10 @@ It combines **SQL, Power BI, and R** to explore customer behavior, visualize key
 ### 📸 Visual Previews
 
 #### 🎯 Power BI Dashboard  
-*(capturePowerBI – Sakila database)*
+![capturePowerBI Base sakila](https://github.com/user-attachments/assets/2c6461ab-0487-4b9c-831c-1adfd5ddcac3)
 
 #### 📊 K-means Segmentation  
-*(Capture ClusterSakila)*
+![Capture ClusterSakila](https://github.com/user-attachments/assets/4bb32a1e-455b-4305-bf54-5ce809f0ecd2)
 
 ---
 
