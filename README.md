@@ -1,66 +1,50 @@
-# 🎬 Video Club Analytics – Analyse & Segmentation Client
+🎬 Video Club Analytics – Customer Analysis & Segmentation
+This project is a full data analysis of a fictional video rental store based on the Sakila MySQL database.
+It combines SQL, Power BI, and R to explore customer behavior, visualize key KPIs, and perform segmentation using K-means clustering.
 
-Ce projet est une analyse complète des données d’un vidéoclub fictif basé sur la base **Sakila**. Il combine SQL, Power BI et R pour explorer les comportements clients, visualiser les KPI clés et effectuer une segmentation grâce au clustering K-means.
+📦 Project Overview
+🔹 SQL – Data Extraction & KPI Creation
+Revenue by customer, film, and category
 
----
+Average basket size, top rented films, store performance
 
-## 📦 Contenu du projet
+🔹 Power BI – Interactive Dashboard
+Dynamic KPIs: total sales, average basket, average rental duration
 
-🔹 **SQL** – Extraction de données et création de KPIs :
-- Chiffre d’affaires par client, film, catégorie
-- Panier moyen, top films loués, performance des magasins
+Top customers, most rented films, sales distribution by category
 
-🔹 **Power BI** – Dashboard interactif :
-- KPIs dynamiques : ventes totales, panier moyen, durée moyenne de location
-- Top clients, films les plus loués, répartition des ventes par catégorie
-- Slicers et filtres pour l’exploration des données
+Slicers and filters for data exploration
 
-🔹 **R (dplyr + ggplot2)** – Segmentation clients :
-- Utilisation de K-means clustering sur `total_spent` et `nb_payment`
-- Méthodes Elbow et Silhouette pour déterminer le nombre optimal de clusters
-- Visualisation des groupes : *Low / Medium / High Spenders*
+🔹 R (dplyr + ggplot2) – Customer Segmentation
+K-means clustering on total_spent and nb_payment
 
----
+Elbow & Silhouette methods to determine optimal number of clusters
 
-## 📁 Structure du dépôt
+Group visualization: Low / Medium / High Spenders
 
+📁 Repository Structure
+📸 Visual Previews
+🎯 Power BI Dashboard
+(capturePowerBI – Sakila database)
 
----
+📊 K-means Segmentation
+(Capture ClusterSakila)
 
-## 📸 Aperçus visuels
+🚀 Learning Objectives
+✅ Implement a full end-to-end analytics workflow
+✅ Highlight technical skills in a business-oriented context
+✅ Create a visual and interpretable deliverable (dashboard + segmentation)
 
-### 🎯 Dashboard Power BI
+🔧 Technologies Used
+SQL (MySQL): joins, group by, views
 
-![capturePowerBI Base sakila](https://github.com/user-attachments/assets/df9ecbfb-5841-44aa-a437-552f829fd7f3)
+Power BI: visualization, DAX measures, slicers
 
+R: dplyr, ggplot2, kmeans, factoextra
 
-### 📊 Segmentation K-means
+📬 Contact
+📧 Rémi DEGAND – Business School Student @ NEOMA BS
+🔗 LinkedIn – Rémi Degand
 
-![Capture ClusterSakila](https://github.com/user-attachments/assets/01f2b8d6-c1b3-4cfd-a1a6-2f5ad00f9d6b)
+📌 Feel free to fork, comment, or reach out if you have any questions or feedback!
 
----
-
-## 🚀 Objectifs pédagogiques
-
-✅ Mettre en œuvre une chaîne analytique de bout en bout  
-✅ Valoriser les compétences techniques dans un contexte métier  
-✅ Créer un livrable visuel et interprétable (dashboard + clusters)
-
----
-
-## 🔧 Technologies
-
-- **SQL (MySQL)** : jointures, group by, vues
-- **Power BI** : visualisation, mesures DAX, slicers
-- **R** : `dplyr`, `ggplot2`, `kmeans`, `factoextra`
-
----
-
-## 📬 Contact
-
-📧 Rémi DEGAND – Étudiant en école de commerce NEOMA BS 
-🔗 https://www.linkedin.com/in/r%C3%A9mi-degand-861863232/
-
----
-
-📌 N’hésitez pas à forker, commenter ou me contacter pour toute remarque ou question !
